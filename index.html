@@ -1,154 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
- <meta charset="utf-8">
- <meta name="Generator" content="Xara HTML filter v.9.6.0.33">
- <meta name="XAR Files" content="lemonad-twist_htm_files/xr_files.txt">
- <title>lemonad-twist</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="lemonad-twist_htm_files/xr_fonts.css">
- <script><!--
- if(navigator.userAgent.indexOf('MSIE')!=-1 || navigator.userAgent.indexOf('Trident')!=-1){ document.write('<link rel="stylesheet" href="lemonad-twist_htm_files/xr_fontsie.css">');} 
- if(navigator.userAgent.indexOf('Android')!=-1){ document.write('<link rel="stylesheet" href="lemonad-twist_htm_files/xr_fontsrep.css">');} 
---></script>
- <script>document.documentElement.className="xr_bgh0";</script>
- <link rel="stylesheet" href="lemonad-twist_htm_files/xr_main.css">
- <link rel="stylesheet" href="lemonad-twist_htm_files/xr_text.css">
- <script>
- <!--
-  var xr_bckgx=0,xr_bckgy=0;function xr_rx(){var ww=document.documentElement.clientWidth;
-  xr_dx=(ww-parseInt(xr_xr.style.width))/2;
-  if(xr_dx<0){xr_dx=0;};
-  document.body.style.backgroundPosition=xr_dx+xr_bckgx+"px "+(xr_bckgy+xr_xr.offsetTop)+"px";};
-  function xr_nn(){return(true);};function xr_mm(){};
-  window.onresize=xr_rx; window.onload=xr_rx;
- -->
-</script>
- <script src="lemonad-twist_htm_files/replaceMobileFonts.js"></script>
- <script>xr_spavert=1;xr_pagegap=4;</script>
- <link rel="stylesheet" href="lemonad-twist_htm_files/ani.css">
- <style>
-  @media screen and (min-width: 957px) {#xr_xr {top:0px;}}
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sebenzile's Salon | Beauty & Hair</title>
+  <meta name="description" content="Welcome to Sebenzile's Salon. Book your appointment via WhatsApp or simply walk in.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #c2185b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #c2185b;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(90, 0, 45, 0.55), rgba(90, 0, 45, 0.55)),
+        url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=85")
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      margin-bottom: 15px;
+      font-family: Georgia, serif;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+      transform: translateY(-3px);
+    }
+
+    .secondary-btn {
+      background: white;
+      color: #c2185b;
+    }
+
+    .secondary-btn:hover {
+      background: #ffe3ee;
+      transform: translateY(-3px);
+    }
+
+    /* WALK-IN NOTICE */
+    .walkin {
+      background: #c2185b;
+      color: white;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 2.3rem;
+      color: #c2185b;
+      font-family: Georgia, serif;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .about-text p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 30px 20px;
+      text-align: center;
+      background: #fff8fb;
+      border-radius: 18px;
+      border: 1px solid #f4d5e1;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 25px rgba(194, 24, 91, 0.12);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      color: #c2185b;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #777;
+    }
+
+    /* BOOKING */
+    .booking {
+      text-align: center;
+      background: linear-gradient(135deg, #c2185b, #8e1644);
+      color: white;
+    }
+
+    .booking h2 {
+      font-size: 2.5rem;
+      font-family: Georgia, serif;
+      margin-bottom: 15px;
+    }
+
+    .booking p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .contact-card span {
+      font-size: 2rem;
+    }
+
+    .contact-card h3 {
+      margin: 10px 0;
+      color: #c2185b;
+    }
+
+    .contact-card p {
+      color: #666;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* FLOATING WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      z-index: 2000;
+      transition: 0.3s;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image img {
+        height: 300px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+    }
+  </style>
 </head>
-<body style="background-color:#606468">
-<!--[if gte IE 9]><!-->
-<div id="xr_xr" class="xr_noc" style="width: 958px; height: 771px; position:relative; text-align:left; margin:0 auto;" onmousedown="xr_mm(event);">
-<!--<![endif]-->
-<!--[if lt IE 9]>
-<div class="xr_ap" id="xr_xr" style="width: 958px; height: 771px; left:50%; margin-left: -479px; text-align: left; top:0px;">
-<![endif]-->
- <script>var xr_xr=document.getElementById("xr_xr")</script>
-<div id="xr_td" class="xr_td">
-<div class="xr_app xr_page0 xr_bgn_0_0_0" id="xr_page0" style="height: 771px; left:0px;">
-<div id="xr_page_lemonad-twist"></div>
-<div class="xr_apb xr_pp" style="width: 957px; height: 771px; top:0px; left:0px; background-color: white; box-shadow: 5px 5px 6px rgba(0,0,0,0.25);"></div>
-<div id="xr_xrc1" class="xr_ap xr_xrc" style="width: 958px; height: 771px; overflow:hidden;">
- <img class="xr_ap" id="x:2:322" src="lemonad-twist_htm_files/362.png" alt="" title="" style="left:1px;top:-2px;width:944px;height:774px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/317.jpg" alt="" title="" style="left:41px;top:16px;width:905px;height:662px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/364.jpg" alt="" title="" style="left:17px;top:16px;width:946px;height:757px;">
- <img class="xr_ap" id="x:3:322" src="lemonad-twist_htm_files/365.png" alt="" title="" style="left:19px;top:-10px;width:939px;height:700px;">
-<div class="xr_group">
- <img class="xr_ap" src="lemonad-twist_htm_files/366.png" alt="" title="" style="left:70px;top:53px;width:690px;height:598px;">
-</div>
- <img class="xr_ap" src="lemonad-twist_htm_files/184.jpg" alt="" title="" style="left:81px;top:69px;width:567px;height:306px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/369.jpg" alt="" title="" style="left:77px;top:394px;width:681px;height:264px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/195.jpg" alt="" title="" style="left:541px;top:61px;width:83px;height:41px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/100.jpg" alt="" title="" style="left:552px;top:183px;width:56px;height:80px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/326.jpg" alt="" title="" style="left:655px;top:48px;width:92px;height:327px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/327.jpg" alt="" title="" style="left:772px;top:56px;width:176px;height:476px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/374.jpg" alt="" title="" style="left:50px;top:658px;width:19px;height:34px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/256.jpg" alt="" title="" style="left:662px;top:55px;width:78px;height:313px;">
- <a href="
-https://onelink.shein.com/42/5vi0x4zzc1ao" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/330.jpg" alt="" title="" style="left:88px;top:78px;width:216px;height:288px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vi0x4zzc1ao" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/331.jpg" alt="" title="" style="left:310px;top:79px;width:214px;height:285px;">
- </a>
- <a href="https://onelink.shein.com/42/5vi00oxonjt6
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">Sebenzile's Salon</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
-" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/332.jpg" alt="" title="" style="left:778px;top:302px;width:166px;height:221px;">
- </a>
- <a href="https://onelink.shein.com/42/5vi00oxonjt6
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>Sebenzile's Salon</h1>
+
+      <p>
+        Beauty, style and confidence — all in one place.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn whatsapp-btn"
+          href="https://wa.me/27660699587?text=Hi%20Sebenzile's%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20available%20times."
+          target="_blank">
+          💬 Book via WhatsApp
+        </a>
+
+        <a class="btn secondary-btn" href="#services">
+          View Services
+        </a>
+
+      </div>
+
+    </div>
+  </section>
 
 
-" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/333.jpg" alt="" title="" style="left:776px;top:64px;width:168px;height:229px;">
- </a>
- <a href="https://onelink.shein.com/42/5vusgtg2o4sq" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/334.jpg" alt="" title="" style="left:86px;top:404px;width:172px;height:230px;">
- </a>
- <a href="https://onelink.shein.com/42/5vusgtg2o4sq" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/335.jpg" alt="" title="" style="left:262px;top:404px;width:172px;height:230px;">
- </a>
- <a href="https://onelink.shein.com/42/5vusgtg2o4sq" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/336.jpg" alt="" title="" style="left:613px;top:405px;width:124px;height:228px;">
- </a>
- <a href="https://onelink.shein.com/42/5vusgtg2o4sq" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/337.jpg" alt="" title="" style="left:438px;top:404px;width:170px;height:229px;">
- </a>
- <img class="xr_ap" src="lemonad-twist_htm_files/384.jpg" alt="" title="" style="left:527px;top:735px;width:247px;height:22px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/385.jpg" alt="" title="" style="left:779px;top:593px;width:166px;height:164px;">
-</div>
-</div>
-<div class="xr_app xr_page1 xr_bgn_1_0_0" id="xr_page1" style="height: 345px; left:0px;">
-<div id="xr_page_lemonad-twist_2"></div>
-<div class="xr_apb xr_pp" style="width: 957px; height: 345px; top:0px; left:0px; background-color: white; box-shadow: 5px 5px 6px rgba(0,0,0,0.25);"></div>
-<div id="xr_xrc2" class="xr_ap xr_xrc" style="width: 958px; height: 345px; overflow:hidden;">
-<iframe src="https://open.spotify.com/embed/artist/5jvlsVxfcbRVuHJ2Uv8WOh?si=wq4Qej--RLW-QSzb6VOJNw" width="958" height="355" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
-</div>
-</div>
-<div class="xr_app xr_page2 xr_bgn_2_0_0" id="xr_page2" style="height: 231px; left:0px;">
-<div id="xr_page_lemonad-twist_3"></div>
-<div class="xr_apb xr_pp" style="width: 955px; height: 231px; top:0px; left:0px; background-color: white; box-shadow: 5px 5px 6px rgba(0,0,0,0.25);"></div>
-<div id="xr_xrc3" class="xr_ap xr_xrc" style="width: 956px; height: 231px; overflow:hidden;">
- <img class="xr_ap" src="lemonad-twist_htm_files/93.png" alt="" title="" style="left:0px;top:-2px;width:958px;height:990px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/387.png" alt="" title="" style="left:-14px;top:-84px;width:974px;height:328px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/121.png" alt="" title="" style="left:10px;top:30px;width:946px;height:182px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/100.jpg" alt="" title="" style="left:873px;top:42px;width:56px;height:80px;">
- <img class="xr_ap" src="lemonad-twist_htm_files/341.jpg" alt="" title="" style="left:849px;top:126px;width:100px;height:41px;">
- <a href="
-https://onelink.shein.com/42/5vtouttyqb10" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/342.jpg" alt="" title="" style="left:614px;top:42px;width:111px;height:153px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vtouttyqb10" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/315.jpg" alt="" title="" style="left:730px;top:42px;width:112px;height:149px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vtq6s9zojmp" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/344.jpg" alt="" title="" style="left:30px;top:39px;width:114px;height:152px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vtq6s9zojmp" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/345.jpg" alt="" title="" style="left:150px;top:39px;width:109px;height:152px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vtq6s9zojmp" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/346.jpg" alt="" title="" style="left:264px;top:40px;width:115px;height:151px;">
- </a>
- <a href="
-https://onelink.shein.com/42/5vtq6s9zojmp" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/347.jpg" alt="" title="" style="left:384px;top:42px;width:115px;height:149px;">
- </a>
- <a href="https://onelink.shein.com/42/5vtouttyqb10" onclick="return(xr_nn());">
-  <img class="xr_ap" src="lemonad-twist_htm_files/348.jpg" alt="" title="" style="left:503px;top:40px;width:106px;height:153px;">
- </a>
-</div>
-</div>
-<div class="xr_app xr_page3 xr_bgn_3_0_0" id="xr_page3" style="height: 499px; left:0px;">
-<div id="xr_page_lemonad-twist_4"></div>
-<div class="xr_apb xr_pp" style="width: 957px; height: 499px; top:0px; left:0px; background-color: white; box-shadow: 5px 5px 6px rgba(0,0,0,0.25);"></div>
-<div id="xr_xrc4" class="xr_ap xr_xrc" style="width: 958px; height: 499px; overflow:hidden;">
-<iframe width="958" height="455" src="https://www.youtube.com/embed/EUD3Jb8VI8s?si=1K1CxwYnwG8fgkz_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>  
-</div>
-</div>
-</div>
-</div>
+  <!-- WALK-IN MESSAGE -->
+  <div class="walkin">
+    🚶 Walk-ins are welcome! You can visit Sebenzile's Salon without an appointment.
+  </div>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Welcome to Sebenzile's Salon</h2>
+        <p>Your beauty is our passion.</p>
+      </div>
+
+      <div class="about">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=85"
+            alt="Salon beauty services">
+        </div>
+
+        <div class="about-text">
+
+          <h3>Look Good. Feel Beautiful.</h3>
+
+          <p>
+            Welcome to Sebenzile's Salon, where beauty and confidence
+            come together. We are dedicated to helping every client
+            look and feel their best.
+          </p>
+
+          <p>
+            Whether you're preparing for a special occasion or simply
+            want to treat yourself, we're here to give you a beautiful
+            salon experience.
+          </p>
+
+          <p>
+            <strong>Appointments are available via WhatsApp,
+            and walk-ins are always welcome.</strong>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Choose your style and let us take care of the rest.</p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon">💇‍♀️</div>
+          <h3>Hair Styling</h3>
+          <p>
+            Beautiful hairstyles created to suit your personality
+            and style.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Hair Treatment</h3>
+          <p>
+            Give your hair the care and attention it deserves.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💅</div>
+          <h3>Beauty Services</h3>
+          <p>
+            Pamper yourself with our range of beauty services.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💖</div>
+          <h3>Special Occasions</h3>
+          <p>
+            Get ready and look your best for your special day.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">👑</div>
+          <h3>Custom Styles</h3>
+          <p>
+            Tell us what you want and we'll help create your look.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌸</div>
+          <h3>Salon Experience</h3>
+          <p>
+            Relax, refresh and enjoy your time at Sebenzile's Salon.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- BOOKING -->
+  <section class="booking">
+
+    <div class="container">
+
+      <h2>Ready for Your New Look?</h2>
+
+      <p>
+        Book your appointment directly through WhatsApp.
+        Prefer to come without an appointment? No problem —
+        <strong>walk-ins are welcome!</strong>
+      </p>
+
+      <a
+        class="btn whatsapp-btn"
+        href="https://wa.me/27660699587?text=Hi%20Sebenzile's%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20available%20times."
+        target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <span>📱</span>
+          <h3>WhatsApp</h3>
+          <p>+27 66 069 9587</p>
+        </div>
+
+        <div class="contact-card">
+          <span>🚶</span>
+          <h3>Walk-ins</h3>
+          <p>Walk-ins are welcome!</p>
+        </div>
+
+        <div class="contact-card">
+          <span>💬</span>
+          <h3>Bookings</h3>
+          <p>Book easily through WhatsApp.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 <strong>Sebenzile's Salon</strong>.
+      All Rights Reserved.
+    </p>
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/27660699587?text=Hi%20Sebenzile's%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20available%20times."
+    target="_blank"
+    aria-label="Book appointment on WhatsApp">
+    💬
+  </a>
+
 </body>
-</html>
+ </html>
